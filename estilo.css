@@ -1,1 +1,43 @@
+/* Estilo Institucional INFRAJUS */
+body {
+    background-color: #0b1a2a;
+    color: #d8c7a3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Botões com visual de Metal Envelhecido */
+.btn-premium {
+    background: transparent;
+    border: 1px solid #cbb38a;
+    color: #cbb38a;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+.btn-premium:hover {
+    background: #cbb38a;
+    color: #0b1a2a;
+    box-shadow: 0 0 15px rgba(203, 179, 138, 0.3);
+}
+
+/* Barra de Navegação */
+nav {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #2a3e52;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
 
