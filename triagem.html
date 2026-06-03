@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -43,7 +43,7 @@
       background: #0a1628;
       border: 1px solid #cbb38a;
       color: white;
-      box-sizing: border-box; /* Isso impede que o campo saia da tela */
+      box-sizing: border-box;
     }
 
     button {
@@ -55,9 +55,17 @@
       cursor: pointer;
       font-size: 16px;
       text-transform: uppercase;
+      transition: 0.3s;
     }
 
     button:hover { background: #cbb38a; color: #050d1a; }
+
+    /* Estilo para quando o botão estiver processando */
+    button:disabled {
+      border-color: #666;
+      color: #666;
+      cursor: wait;
+    }
   </style>
 </head>
 <body>
@@ -80,9 +88,24 @@
       <label>Narrativa dos Fatos</label>
       <textarea rows="4" placeholder="Descreva o caso..."></textarea>
 
-      <button type="button">GERAR PROTOCOLO</button>
+      <button type="button" id="btnGerar" onclick="processarTriagem()">GERAR PROTOCOLO</button>
     </form>
   </div>
+
+  <script>
+    function processarTriagem() {
+      const btn = document.getElementById('btnGerar');
+      
+      // Muda o texto e desativa o botão
+      btn.innerHTML = "ANALISANDO DADOS...";
+      btn.disabled = true;
+      
+      // Simula o tempo de análise forense (2.5 segundos)
+      setTimeout(() => {
+        window.location.href = 'protocolo.html';
+      }, 2500);
+    }
+  </script>
 
 </body>
 </html>
