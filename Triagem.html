@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triagem Pericial | INFRAJUS</title>
+  <style>
+    body {
+      margin: 0; padding: 20px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #050d1a;
+      color: #d8c7a3;
+      display: flex; justify-content: center;
+      min-height: 100vh;
+    }
+    .form-wrapper { max-width: 500px; width: 100%; }
+    h2 { color: #cbb38a; text-align: center; margin-bottom: 30px; letter-spacing: 1px; }
+    
+    label { display: block; margin-bottom: 8px; font-size: 14px; }
+    input, select, textarea {
+      width: 100%; padding: 12px; margin-bottom: 20px;
+      background: rgba(203, 179, 138, 0.1);
+      border: 1px solid #cbb38a;
+      color: #d8c7a3; border-radius: 4px; box-sizing: border-box;
+    }
+    
+    button {
+      width: 100%; padding: 15px;
+      background: transparent; color: #cbb38a;
+      border: 1px solid #cbb38a; cursor: pointer;
+      font-size: 16px; border-radius: 4px; transition: 0.3s;
+    }
+    button:hover { background: #cbb38a; color: #050d1a; }
+  </style>
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <h2>TRIAGEM PERICIAL</h2>
+    <form>
+      <label>Natureza do Caso</label>
+      <select>
+        <option>Análise de Evidência Digital</option>
+        <option>Fotogrametria Forense</option>
+        <option>Auditoria de Fatos</option>
+      </select>
+
+      <label>Nível de Complexidade</label>
+      <input type="text" placeholder="Ex: Baixa, Média, Alta">
+
+      <label>Breve Descrição do Contexto</label>
+      <textarea rows="4" placeholder="Descreva os pontos principais..."></textarea>
+
+      <button type="button">GERAR PROTOCOLO DE TRIAGEM</button>
+    </form>
+  </div>
+
+</body>
+</html>
 
