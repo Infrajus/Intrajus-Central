@@ -1,111 +1,61 @@
- <!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Triagem | INFRAJUS</title>
   <style>
-    body {
-      margin: 0; 
-      padding: 0;
-      background-color: #050d1a;
-      color: #d8c7a3;
-      font-family: sans-serif;
-      display: flex; 
-      justify-content: center; 
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 400px;
-      background-color: #050d1a;
-      border: 1px solid #cbb38a;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-
-    h2 { 
-      color: #cbb38a; 
-      text-align: center; 
-      margin-bottom: 25px;
-      text-transform: uppercase;
-    }
-
+    body { margin: 0; padding: 0; background-color: #050d1a; color: #d8c7a3; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .container { width: 90%; max-width: 400px; background-color: #050d1a; border: 1px solid #cbb38a; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+    h2 { color: #cbb38a; text-align: center; margin-bottom: 25px; text-transform: uppercase; }
     label { display: block; margin-bottom: 5px; font-size: 14px; }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      background: #0a1628;
-      border: 1px solid #cbb38a;
-      color: white;
-      box-sizing: border-box;
-    }
-
-    button {
-      width: 100%;
-      padding: 15px;
-      background: transparent;
-      color: #cbb38a;
-      border: 1px solid #cbb38a;
-      cursor: pointer;
-      font-size: 16px;
-      text-transform: uppercase;
-      transition: 0.3s;
-    }
-
+    input, textarea { width: 100%; padding: 12px; margin-bottom: 20px; background: #0a1628; border: 1px solid #cbb38a; color: white; box-sizing: border-box; }
+    button { width: 100%; padding: 15px; background: transparent; color: #cbb38a; border: 1px solid #cbb38a; cursor: pointer; font-size: 16px; text-transform: uppercase; transition: 0.3s; }
     button:hover { background: #cbb38a; color: #050d1a; }
-
-    /* Estilo para quando o botão estiver processando */
-    button:disabled {
-      border-color: #666;
-      color: #666;
-      cursor: wait;
-    }
   </style>
 </head>
 <body>
 
   <div class="container">
     <h2>TRIAGEM PERICIAL</h2>
-    <form>
+    <form id="formTriagem" action="https://formspree.io/f/mgobeobg" method="POST">
       <label>Nome do Interessado</label>
-      <input type="text" placeholder="Nome completo">
+      <input type="text" name="Nome" id="nome" placeholder="Nome completo" required>
 
       <label>WhatsApp</label>
-      <input type="tel" placeholder="(00) 90000-0000">
+      <input type="tel" name="WhatsApp" id="whatsapp" placeholder="(00) 90000-0000" required>
 
       <label>E-mail</label>
-      <input type="email" placeholder="seu-email@exemplo.com">
+      <input type="email" name="Email" id="email" placeholder="seu-email@exemplo.com">
 
       <label>Data do fato</label>
-      <input type="date">
+      <input type="date" name="Data" id="data">
 
       <label>Narrativa dos Fatos</label>
-      <textarea rows="4" placeholder="Descreva o caso..."></textarea>
+      <textarea name="Narrativa" id="narrativa" rows="4" placeholder="Descreva o caso..."></textarea>
 
-      <button type="button" id="btnGerar" onclick="processarTriagem()">GERAR PROTOCOLO</button>
+      <button type="button" id="btnGerar" onclick="enviarDados()">GERAR PROTOCOLO</button>
     </form>
   </div>
 
   <script>
-    function processarTriagem() {
+    async function enviarDados() {
       const btn = document.getElementById('btnGerar');
+      const form = document.getElementById('formTriagem');
       
-      // Muda o texto e desativa o botão
       btn.innerHTML = "ANALISANDO DADOS...";
       btn.disabled = true;
-      
-      // Simula o tempo de análise forense (2.5 segundos)
-      setTimeout(() => {
-        window.location.href = 'protocolo.html';
-      }, 2500);
+
+      // Envia os dados para o Formspree
+      await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      // Redireciona para o protocolo
+      window.location.href = 'protocolo.html';
     }
   </script>
-
 </body>
 </html>
