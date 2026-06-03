@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INFRAJUS | Inteligência Pericial</title>
+  <style>
+    body { margin: 0; background-color: #050d1a; color: #d8c7a3; font-family: sans-serif; text-align: center; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+    nav { padding: 20px; width: 100%; display: flex; justify-content: center; gap: 10px; background: rgba(0,0,0,0.5); }
+    .nav-btn { color: #cbb38a; text-decoration: none; border: 1px solid #cbb38a; padding: 5px 10px; font-size: 12px; border-radius: 4px; }
+    .logo-container img { width: 250px; margin-top: 40px; }
+    .sub { font-size: 20px; color: #cbb38a; letter-spacing: 3px; margin-top: 10px; }
+    button { margin-top: 30px; padding: 15px 30px; background: transparent; border: 1px solid #cbb38a; color: #cbb38a; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="pericias.html" class="nav-btn">Perícias</a>
+    <a href="investigacoes.html" class="nav-btn">Investigações</a>
+    <a href="faq.html" class="nav-btn">Dúvidas</a>
+  </nav>
+
+  <div class="logo-container">
+      <img src="1000527572-removebg-preview.png" alt="Logo">
+  </div>
+  <h2 class="sub">INTELIGÊNCIA PERICIAL</h2>
+  
+  <button onclick="window.location.href='triagem.html'">INICIAR TRIAGEM</button>
+
+</body>
+</html>
 
