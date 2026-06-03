@@ -44,3 +44,13 @@ button:hover {
   background: #cbb38a;
   color: #0b1a2a;
 }
+
+/* 🔬 AJUSTE DO LOGO */
+img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
