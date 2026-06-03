@@ -1,110 +1,37 @@
-    <!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>INFRAJUS | Inteligência Pericial</title>
-  
+  <title>INFRAJUS</title>
   <style>
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: #050d1a;
-      color: #d8c7a3;
-      display: flex; flex-direction: column; align-items: center;
-      min-height: 100vh; text-align: center;
-      position: relative;
+    body { background-color: #050d1a; color: #d8c7a3; font-family: sans-serif; text-align: center; margin: 0; }
+    
+    /* MENU FORÇADO COM BORDA BRANCA PARA APARECER */
+    nav { 
+        padding: 30px; 
+        background: #000; 
+        border: 2px solid white; 
+        display: block; 
     }
-
-    /* Navegação */
-    nav {
-      position: relative; z-index: 10;
-      padding: 20px 10px; width: 100%;
-      display: flex; justify-content: center; gap: 15px;
-      background: rgba(5, 13, 26, 0.8);
-    }
-    .nav-btn {
-      color: #cbb38a; text-decoration: none; 
-      text-transform: uppercase; font-size: 11px; 
-      letter-spacing: 1px; border: 1px solid #cbb38a;
-      padding: 8px 12px; border-radius: 4px;
-      transition: 0.3s;
-    }
-    .nav-btn:hover { background: #cbb38a; color: #050d1a; }
-
-    /* Fundo forense */
-    .forensic-layer {
-      position: fixed; top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none; z-index: 0;
-    }
-    .fingerprint-img { position: absolute; width: 120px; opacity: 0.06; }
-    .fp1 { top: 5%; left: 5%; }
-    .fp2 { bottom: 5%; right: 5%; }
-
-    .main-wrapper {
-      max-width: 500px; padding: 20px;
-      width: 100%; position: relative; z-index: 5;
-      margin-top: 40px;
-    }
-
-    /* Ajuste do Logotipo e Títulos */
-    .logo-container { margin-bottom: 10px; }
-    .logo-container img { width: 220px; height: 220px; object-fit: contain; }
-
-    .title-area { margin-bottom: 30px; }
-    .subtitle-main { 
-      color: #cbb38a; 
-      font-size: 20px; 
-      letter-spacing: 4px; 
-      text-transform: uppercase; 
-      margin: 0; 
-    }
-
-    p { font-size: 14px; line-height: 1.6; margin-bottom: 30px; color: #d8c7a3; opacity: 0.8; }
-
-    button {
-      padding: 15px 40px;
-      border: 1px solid #cbb38a;
-      background: transparent;
-      color: #cbb38a;
-      cursor: pointer;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: 0.3s;
-      text-transform: uppercase;
-    }
-    button:hover { background: #cbb38a; color: #050d1a; }
+    .nav-btn { color: white; margin: 0 10px; text-transform: uppercase; text-decoration: none; }
+    
+    .logo-container img { width: 300px; margin-top: 50px; } /* Logotipo maior */
+    .sub { font-size: 24px; color: #cbb38a; margin-top: 10px; }
   </style>
 </head>
-
 <body>
 
   <nav>
-    <a href="pericias.html" class="nav-btn">Perícias</a>
-    <a href="investigacoes.html" class="nav-btn">Investigações</a>
-    <a href="faq.html" class="nav-btn">Dúvidas</a>
-    <a href="casos.html" class="nav-btn">Casos</a>
+    <a href="pericias.html" class="nav-btn">PERÍCIAS</a>
+    <a href="investigacoes.html" class="nav-btn">INVESTIGAÇÕES</a>
+    <a href="faq.html" class="nav-btn">DÚVIDAS</a>
   </nav>
 
-  <div class="forensic-layer">
-    <img src="1000533655-removebg-preview.png" class="fingerprint-img fp1" alt="Digital 1">
-    <img src="1000533656-removebg-preview.png" class="fingerprint-img fp2" alt="Digital 2">
+  <div class="logo-container">
+      <img src="1000527572-removebg-preview.png" alt="Logo">
   </div>
-
-  <div class="main-wrapper">
-    <div class="logo-container">
-        <img src="1000527572-removebg-preview.png" alt="Logo INFRAJUS">
-    </div>
-
-    <div class="title-area">
-        <h2 class="subtitle-main">INTELIGÊNCIA PERICIAL</h2>
-    </div>
-
-    <p>Ambiente digital destinado à análise preliminar de demandas periciais, investigação de fatos e suporte técnico especializado.</p>
-
-    <button onclick="window.location.href='triagem.html'">INICIAR TRIAGEM</button>
-  </div>
+  <h2 class="sub">INTELIGÊNCIA PERICIAL</h2>
 
 </body>
 </html>
