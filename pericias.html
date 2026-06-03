@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perícias | INFRAJUS</title>
+  
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #050d1a;
+      color: #d8c7a3;
+      display: flex; flex-direction: column; align-items: center;
+      min-height: 100vh; text-align: center;
+    }
+
+    nav { padding: 20px; display: flex; justify-content: center; gap: 20px; }
+    .nav-btn {
+      color: #cbb38a; text-decoration: none; 
+      text-transform: uppercase; font-size: 11px; 
+      letter-spacing: 1px; border: 1px solid #cbb38a;
+      padding: 6px 12px; border-radius: 4px;
+    }
+    .nav-btn:hover { background: #cbb38a; color: #050d1a; }
+
+    .content-wrapper { max-width: 800px; padding: 40px 20px; }
+    h1 { color: #cbb38a; letter-spacing: 2px; margin-bottom: 40px; }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #cbb38a;
+      padding: 20px;
+      transition: 0.3s;
+    }
+    .card:hover { background: rgba(203, 179, 138, 0.1); }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-btn">Início</a>
+    <a href="pericias.html" class="nav-btn">Perícias</a>
+    <a href="investigacoes.html" class="nav-btn">Investigações</a>
+    <a href="faq.html" class="nav-btn">Dúvidas</a>
+  </nav>
+
+  <div class="content-wrapper">
+    <h1>Nossas Perícias</h1>
+    
+    <div class="grid-container">
+        <div class="card">Perícia Criminal Particular</div>
+        <div class="card">Assistência Técnica Judicial</div>
+        <div class="card">Parecer Técnico</div>
+        <div class="card">Perícia em Acidentes de Trânsito</div>
+        <div class="card">Perícia em Vídeos e Imagens</div>
+        <div class="card">Perícia em Áudios</div>
+        <div class="card">Perícia Digital</div>
+    </div>
+  </div>
+
+</body>
+</html>
 
