@@ -1,4 +1,4 @@
-      <!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -21,7 +21,7 @@
       position: relative;
     }
 
-    /* CAMADA FORENSE: Aumentei a visibilidade para teste */
+    /* CAMADA FORENSE: Agora com suas imagens reais */
     .forensic-layer {
       position: absolute;
       top: 0;
@@ -32,22 +32,21 @@
       z-index: 0;
     }
 
-    .trace {
+    .fingerprint-img {
       position: absolute;
-      color: #cbb38a;
-      font-family: monospace;
-      /* Animação mais rápida e mais forte para você enxergar agora */
-      animation: test-effect 4s infinite alternate;
+      width: 180px; /* Tamanho ajustável das digitais */
+      opacity: 0;
+      animation: scan-effect 8s infinite alternate;
     }
 
-    @keyframes test-effect {
-      from { opacity: 0.1; transform: scale(1); }
-      to { opacity: 0.5; transform: scale(1.2); }
+    @keyframes scan-effect {
+      from { opacity: 0.02; transform: scale(0.95); }
+      to { opacity: 0.08; transform: scale(1.05); }
     }
 
-    .trace:nth-child(1) { top: 20%; left: 10%; font-size: 80px; }
-    .trace:nth-child(2) { top: 60%; right: 15%; font-size: 60px; animation-delay: 1s; }
-    .trace:nth-child(3) { bottom: 15%; left: 25%; font-size: 100px; animation-delay: 2s; }
+    /* Posicionamento das suas imagens */
+    .fp1 { top: 15%; left: 10%; }
+    .fp2 { bottom: 15%; right: 10%; animation-delay: 2s; }
 
     /* ESTRUTURA PRINCIPAL */
     .main-wrapper {
@@ -105,9 +104,8 @@
 <body>
 
   <div class="forensic-layer">
-    <div class="trace">◌</div>
-    <div class="trace">◎</div>
-    <div class="trace">◉</div>
+    <img src="1000533655-removebg-preview.png" class="fingerprint-img fp1" alt="Digital 1">
+    <img src="1000533656-removebg-preview.png" class="fingerprint-img fp2" alt="Digital 2">
   </div>
 
   <div class="main-wrapper">
